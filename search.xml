@@ -4,40 +4,19 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2025/04/21/hello-world/"/>
-      <url>/2025/04/21/hello-world/</url>
+      <title>Zero-Knowledge Proofs(ZKPs)</title>
+      <link href="/2025/04/21/%E9%9B%B6%E7%9F%A5%E8%AF%86%E8%AF%81%E6%98%8E/"/>
+      <url>/2025/04/21/%E9%9B%B6%E7%9F%A5%E8%AF%86%E8%AF%81%E6%98%8E/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>彭麒源下次要请我喝水</title>
-      <link href="/2025/04/21/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/"/>
-      <url>/2025/04/21/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/</url>
-      
-        <content type="html"><![CDATA[<h2 id="下次必请我喝水"><a href="#下次必请我喝水" class="headerlink" title="下次必请我喝水"></a>下次必请我喝水</h2><p><img src="/images/1.png" alt="帅照"></p>]]></content>
+        <content type="html"><![CDATA[<p>ZKPs enable a party (the prover) to convince another party (the verifier) that a statement is true <strong>without revealing any additional information</strong> which beyond the validity of the statement itself.</p><h2 id="The-Core-Principles"><a href="#The-Core-Principles" class="headerlink" title="The Core Principles"></a>The Core Principles</h2><ul><li>Completeness: If the statement is true, an honest verifier will be convinced by an honest prover.</li><li>Soundness: If the statement is false, no dishonest prover can convince an honest verifier.</li><li>Zero-Knowledge: The verifier learns nothing beyond the statement’s validity.</li></ul><h2 id="How-It-Works"><a href="#How-It-Works" class="headerlink" title="How It Works"></a>How It Works</h2><p>Bob is colorblind. Alice wants to prove to Bob that she can distinguish the color of the ball. Bob buys two balls, one red and one blue, but forgets which is which.</p><ul><li>Challenge: Bob shows Alice one of the two balls and asks her whethere it is red or blue.</li><li>Response: Alice tells Bob what color the ball is.</li><li>Verification: If Alice is trully colorblind, the she has a 50% chance of guessing correctly every time</li></ul><p>Repeating this process n times reduces the cheating probability to $\dfrac{1}{2^{n-1}}$. After six rounds, Bob is 96.875% convinced Alice is not colorblind, yet learns nothing about how Alice can distinguish the color of the ball and the specific color of the each ball.</p><h2 id="Types-of-ZKPs"><a href="#Types-of-ZKPs" class="headerlink" title="Types of ZKPs"></a>Types of ZKPs</h2><ul><li>Interaction ZKPs: Require back-and-forth communication</li><li>Non-Interaction ZKPs: Generate a proof that everyone can verify.</li></ul>]]></content>
       
       
       <categories>
           
-          <category> Lua </category>
+          <category> Cryptography </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> Foo </tag>
-            
-            <tag> Bar </tag>
-            
-        </tags>
       
     </entry>
     
