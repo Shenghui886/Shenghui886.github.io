@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Mental Poker Protocol</title>
+      <link href="/2025/04/23/%E6%99%BA%E5%8A%9B%E6%89%91%E5%85%8B/"/>
+      <url>/2025/04/23/%E6%99%BA%E5%8A%9B%E6%89%91%E5%85%8B/</url>
+      
+        <content type="html"><![CDATA[<p>Mental Poker protocals allow players to compete fairly in card games without trusting a central dealer. Using cryptography, players can shuffle, deal, and reveal cards securely.</p><h2 id="The-Core-Principles">The Core Principles</h2><ol><li>Fairness: No player can access other’s cards before the game concludes.</li><li>Immutability: Dealt cards cannot be modified or replaced after being issued.</li><li>Randomness: Cards must be randomly generated and distributed, with no player able to predict the outcome in advance.</li><li>Trustless Design: No reliance on a trusted dealer or centralized platform.</li></ol><h2 id="How-It-Works">How It Works</h2><p>Let’s assume Alice is a player, but she’s acting as the dealer for this round. The order of players after her is Bob, Carol, then Dave.</p><ul><li>Key Generation: Each player generates a public-private key pair</li><li>Card Generation: Alice(dealer) generates a deck of 52 cards, with each card represented by a unique numeric identifier(e.g. 0-51).</li><li>Encrypting the Deck: Alice encrypts all 52 cards with her public key: $E_A(card_1), E_A(Card_2), …, E_A(card_{52})$, then she sends the encrypted deck to Bob</li><li>Bob randomly selects 3 encrypted cards, re-encrypts them using his public key, and sends them to Alice: $E_B(E_A(card_r))$.</li><li>Alice sends back:$D_A(E_B(E_A(card_r))) = E_B(card_r)$</li><li>Bob distributes the remaining cards to Carol: $E_A(card_n)$</li><li>Carol randomly selects 3 encrypted cards, re-encrypts them using his public key, and sends them to Alice: $E_C(E_A(card_r))$.</li><li>Alice sends back:$D_A(E_C(E_A(card_r))) = E_C(card_r)$</li><li>Carol distributes the remaining cards to Dave: $E_A(card_n)$</li><li>Dave randomly selects 3 encrypted cards, re-encrypts them using his public key, and sends them to Alice: $E_D(E_A(card_r))$.</li><li>Alice sends back:$D_A(E_D(E_A(card_r))) = E_D(card_r)$</li><li><strong>Dave randomly selects 3 encrypted cards, and sends them to Alice</strong>: $E_A(card_r)$</li></ul><p>After all encrypted cards have been distributed, each player uses their private key to decrypt their own cards.</p><blockquote><p>This protocol only outlines a high-level concept and contains significant vulnerabilities. A robust implementation requires referencing established cryptographic research papers.</p></blockquote><h2 id="Conclusion">Conclusion</h2><p>Mental Poker protocols like this enable truly fair online games-even for <em>three-card poker</em>. By combining encryption, ZKPs, and decentralized shuffling, Alice, Bob, Carol, and Dave can play without fearing a rigged deck. While not yet mainstream, these techniques are paving the way for trustless gaming on blockchain platforms.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Cryptography </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> three-card poker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Zero-Knowledge Proofs(ZKPs)</title>
       <link href="/2025/04/22/%E9%9B%B6%E7%9F%A5%E8%AF%86%E8%AF%81%E6%98%8E/"/>
       <url>/2025/04/22/%E9%9B%B6%E7%9F%A5%E8%AF%86%E8%AF%81%E6%98%8E/</url>
